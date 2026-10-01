@@ -10,7 +10,7 @@
 // ---------- Problem 1: Range Builder ----------
 // Return an array of every integer from start to end, inclusive.
 // Use a for loop and .push() to build the array one number at a time.
-/* function getNumbersInRange(start, end) {
+function getNumbersInRange(start, end) {
   // TODO: your code here
   const range = []
   for (let i = start; i<=end;i++){ //as long as i isn't more than end, it continues
@@ -21,13 +21,13 @@
 
 console.log(getNumbersInRange(1, 5));  // [1, 2, 3, 4, 5]
 console.log(getNumbersInRange(10, 10)); // [10]
-console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8] */
+console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
 
 
 // ---------- Problem 2: Sum a Range ----------
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
-/* function sumRange(start, end) {
+function sumRange(start, end) {
   // TODO: your code here
   let sum = null
   for (let i = start; i<=end;i++){ //as long as i isn't more than end, it continues
@@ -38,13 +38,13 @@ console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8] */
 
 console.log(sumRange(1, 5));   // 15
 console.log(sumRange(1, 100)); // 5050
-console.log(sumRange(4, 4));   // 4 */
+console.log(sumRange(4, 4));   // 4
 
 
 // ---------- Problem 3: Countdown ----------
 // Return an array counting down from n to 1.
 // Use a while loop, not a for loop.
-/* function countdown(n) {
+function countdown(n) {
   // TODO: your code here
   const count=[];
   while (n>=1) {
@@ -55,7 +55,7 @@ console.log(sumRange(4, 4));   // 4 */
 }
 console.log(countdown(5)); // [5, 4, 3, 2, 1]
 console.log(countdown(1)); // [1]
-console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1] */
+console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
 
 
 // ---------- Problem 4: Count the Vowels ----------
@@ -67,12 +67,10 @@ function countVowels(str) {
   // TODO: your code here
   const vowelz=["a","e","i","o","u"];
   let vowels=0;
-  let i=str.length;
-  while (i>=0){
-    if (str.charAt[i]===vowelz.includes){
+  for (let i=0;i<=str.length;i++){
+    if (vowelz.includes(str[i])){
       vowels++;
     }
-    i--;
   }
   return vowels;
 }
@@ -88,14 +86,22 @@ console.log(countVowels("aeiou"));      // 5
 // one row per line (rows separated by "\n"). Each row shows n
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
-/* function multiplicationTable(n) {
+function multiplicationTable(n) {
   // TODO: your code here
-
+  let m=[]
+  const n = "\n"
+  for (let i=1;i<=n;i++){
+    for (let j=1;j<=n;j++){
+      let y = (i * j);
+      m.push(y);
+      console.log(n)
+    }
+  }
 }
 
 console.log(multiplicationTable(3));
 // "1 2 3\n2 4 6\n3 6 9"
-console.log(multiplicationTable(5)); */
+console.log(multiplicationTable(5));
 
 
 // ---------- Problem 6: Primes Under a Limit ----------
@@ -105,23 +111,23 @@ console.log(multiplicationTable(5)); */
 // to (but not including) that number and check
 // candidate % divisor === 0. A boolean flag that flips to false
 // when a divisor is found works well here.
-/* function primesUnder(limit) {
+function primesUnder(limit) {
   // TODO: your code here
 
 }
 
 console.log(primesUnder(10)); // [2, 3, 5, 7]
 console.log(primesUnder(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
-console.log(primesUnder(2));  // [] */
+console.log(primesUnder(2));  // []
 
 
 // ---------- Stretch (optional) ----------
 // Rewrite multiplicationTable so it uses break or continue to skip
 // printing the row where the row number equals the column number
 // (the diagonal).
-/* function multiplicationTableSkipDiagonal(n) {
+function multiplicationTableSkipDiagonal(n) {
   // TODO: your code here
 
 }
 
-console.log(multiplicationTableSkipDiagonal(3)); */
+console.log(multiplicationTableSkipDiagonal(3));
